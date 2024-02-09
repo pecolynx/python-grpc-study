@@ -99,6 +99,10 @@ export-codegen:
 test:
 	$(PANTS) test ::
 
+.PHONY: fix
+fix:
+	$(PANTS) fix ::
+
 .PHONY: package
 package:
 	$(PANTS) package ::
