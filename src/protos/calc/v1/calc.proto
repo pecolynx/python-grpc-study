@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package calc.v1;
+
+option java_multiple_files = true;
+option java_outer_classname = "CalcProto";
+option java_package = "io.grpc.examples.calc";
+option objc_class_prefix = "CALC";
+
+service Calc {
+
+  rpc UnaryUnary(CalcRequest) returns (CalcResponse) {}
+  rpc UnaryStream(CalcRequest) returns (stream CalcResponse) {}
+  rpc StreamUnary(stream CalcRequest) returns (CalcResponse) {}
+  rpc StreamStream(stream CalcRequest) returns (stream CalcResponse) {}
+}
+
+message CalcRequest {
+  repeated int32 data = 1;
+}
+
+message CalcResponse {
+  repeated int32 data = 1;
+}

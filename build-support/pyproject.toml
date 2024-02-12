@@ -12,7 +12,7 @@ ignore_missing_imports = true
 # strict = true
 
 [[tool.mypy.overrides]]
-module = ['helloworld.v1.*']
+module = ['helloworld.v1.*', 'calc.v1.*']
 ignore_errors = true
 
 # [tool.pytest.ini_options]
